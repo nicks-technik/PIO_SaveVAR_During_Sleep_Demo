@@ -1,0 +1,22 @@
+#include <Arduino.h>
+
+int _sleep_duration = 60;
+
+void setup()
+{
+
+  Serial.begin(115200);
+  Serial.setTimeout(2000);
+  delay(60);
+
+  Serial.println("online again");
+
+  ESP.deepSleep(_sleep_duration * 1000000);
+}
+
+void loop()
+{
+
+
+  Serial.println("done");
+}
